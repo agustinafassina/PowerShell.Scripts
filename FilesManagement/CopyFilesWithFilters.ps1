@@ -1,0 +1,1 @@
+## Copiar con filtros por ejemplo, solo los .png de todo un directorio
