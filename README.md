@@ -3,6 +3,10 @@ This repository contains scripts that can help you in your day-to-day working wi
 
 ## Consumir apis externals
 Consume external APIs
+* Get
+* Post
+* Post with file
+* Auth: Access token
 
 ## File management
 * Copy Files
