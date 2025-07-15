@@ -1,4 +1,4 @@
-# Definir las rutas
+# Folder routes
 $origen = "v1"
 $destino = "v2"
 
