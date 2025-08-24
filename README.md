@@ -12,3 +12,7 @@ Consume external APIs
 * Copy Files
 * Copy files with filers
 * Copy folders and subfolders recursive
+
+## Script with Curl
+* Get
+* Get and download
