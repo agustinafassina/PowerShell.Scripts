@@ -12,6 +12,7 @@ This repository contains scripts that can help you in your day-to-day working wi
 * Copy Files
 * Copy files with filers
 * Copy folders and subfolders recursive
+* Create zip
 
 ### Script with Curl
 * Get
