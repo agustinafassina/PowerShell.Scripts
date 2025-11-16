@@ -23,3 +23,8 @@ This repository contains scripts that can help you in your day-to-day working wi
 * Create environment variable in a windows server
 * Create task scheduled in windows what run every day
 * Install IIS
+
+### Security scripts
+* Scan IP with test connection
+* Scan IP with Nmap
+* Scan IP with TcpClient (from .net in powershell)
