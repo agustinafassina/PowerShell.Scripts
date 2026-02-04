@@ -77,9 +77,7 @@ You can add a new folder per category (e.g. `SystemInfo/`, `Logs/`, `Notificatio
 - Windows with PowerShell 5.1 or PowerShell 7+
 - For **Nmap**: Nmap installed and in PATH
 - For APIs: configure tokens/API keys per script (Auth0, Azure AD, Google, Azure DevOps, etc.)
-
 ---
-
 # PowerShell Scripts 📦
 Repositorio de scripts en PowerShell para tareas cotidianas en Windows: APIs externas, gestion de archivos, seguridad, tareas programadas y utilidades del sistema.
 
