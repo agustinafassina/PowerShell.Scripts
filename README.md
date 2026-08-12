@@ -3,52 +3,62 @@ Repository of PowerShell scripts for day-to-day tasks on Windows: external APIs,
 
 ## Repository structure 📁
 ### External APIs 🔌
-| Folder / script | Description |
-|-----------------|-------------|
-| **Auth0** | `AccessToken.ps1` — Get access token for Auth0 |
-| **AzureAD** | `AccessToken.ps1` — Token for Azure AD; **GraphApi/GetUserDetail.ps1** — user detail via Microsoft Graph |
-| **AzureDevops** | `AzureAgentTest.ps1` — Test permissions with PAT (Personal Access Token) |
-| **GoogleApi** | `google-request.ps1` — Example with Google Places Autocomplete API |
-| **GeneralMethods** | Reusable helpers: `Get.ps1`, `PostHeader.ps1`, `PostWithJson.ps1`, `PostWithFile.ps1`, `CheckRandomApi.ps1` |
+| Path | Description |
+|------|-------------|
+| `ExternalApis/Auth0/AccessToken.ps1` | Get access token for Auth0 |
+| `ExternalApis/AzureAD/AccessToken.ps1` | Token for Azure AD |
+| `ExternalApis/AzureAD/GraphApi/GetUserDetail.ps1` | User detail via Microsoft Graph |
+| `ExternalApis/AzureDevops/AzureAgentTest.ps1` | Test permissions with PAT (Personal Access Token) |
+| `ExternalApis/GoogleApi/google-request.ps1` | Example with Google Places Autocomplete API |
+| `ExternalApis/GeneralMethods/Get.ps1` | GET request example |
+| `ExternalApis/GeneralMethods/PostHeader.ps1` | POST with custom headers |
+| `ExternalApis/GeneralMethods/PostWithJson.ps1` | POST with JSON body |
+| `ExternalApis/GeneralMethods/PostWithFile.ps1` | POST with file upload |
+| `ExternalApis/GeneralMethods/CheckRandomApi.ps1` | Random API check example |
 
 ### File management 📂
-| Folder / script | Description |
-|-----------------|-------------|
-| **Backups-Only-Files** | `Backups.ps1` — Backup files/folders with date and time stamp |
-| **CopyFolderFiles** | `CopyFoldersAndSubfolders.ps1` — Recursive copy of folders and subfolders |
-| **CreateZip** | `CreateZip.ps1` — Create ZIP files |
-| **ReadJson** | `ReadJson.ps1` — Read and filter data from JSON (e.g. projects, dates) |
-| **SearchFile.ps1** | Recursive file search (e.g. `*.ps1`) in a path |
+| Path | Description |
+|------|-------------|
+| `FilesManagement/Backups-Only-Files/Backups.ps1` | Backup files/folders with date and time stamp |
+| `FilesManagement/CopyFolderFiles/CopyFoldersAndSubfolders.ps1` | Recursive copy of folders and subfolders |
+| `FilesManagement/CreateZip/CreateZip.ps1` | Create ZIP files |
+| `FilesManagement/ReadJson/ReadJson.ps1` | Read and filter data from JSON (e.g. projects, dates) |
+| `FilesManagement/SearchFile.ps1` | Recursive file search (e.g. `*.ps1`) in a path |
 
 ### VariablesReplace 🔄
-| Script | Description |
-|--------|-------------|
-| `VariableReplace.ps1` | Replace properties/variables in JSON and write to file |
+| Path | Description |
+|------|-------------|
+| `VariablesReplace/VariableReplace.ps1` | Replace properties/variables in JSON and write to file |
 
 ### Curl 🌐
-| Script | Description |
-|--------|-------------|
-| `GetCurl.ps1` | GET with curl |
-| `GetDownloadResponse.ps1` | GET and download response |
+| Path | Description |
+|------|-------------|
+| `Curl/GetCurl.ps1` | GET with curl |
+| `Curl/GetDownloadResponse.ps1` | GET and download response |
 
 ### Security tools 🔒
-| Script | Description |
-|--------|-------------|
-| `ScanIps.ps1` | Scan IPs with Test-Connection |
-| `ScanIpsTcpClient.ps1` | Scan IPs with TcpClient (.NET) |
-| **Nmap/** `ScanIp.ps1` | Scan IP with Nmap |
+| Path | Description |
+|------|-------------|
+| `SecurityTool/ScanIps.ps1` | Scan IPs with Test-Connection |
+| `SecurityTool/ScanIpsTcpClient.ps1` | Scan IPs with TcpClient (.NET) |
+| `SecurityTool/Nmap/ScanIp.ps1` | Scan IP with Nmap |
 
 ### Useful Windows scripts ⚙️
-| Script | Description |
-|--------|-------------|
-| `AddAzureAgent.ps1` | Add Azure DevOps agent on Windows |
-| `CreateEnvironmentVariable.ps1` | Create environment variable on the system |
-| `CreateTaskScheduled.ps1` | Create scheduled task (e.g. daily run) |
-| `IISInstall.ps1` | Install IIS |
+| Path | Description |
+|------|-------------|
+| `UsefulWindowsScripts/AddAzureAgent.ps1` | Add Azure DevOps agent on Windows |
+| `UsefulWindowsScripts/CreateEnvironmentVariable.ps1` | Create environment variable on the system |
+| `UsefulWindowsScripts/CreateTaskScheduled.ps1` | Create scheduled task (e.g. daily run) |
+| `UsefulWindowsScripts/IISInstall.ps1` | Install IIS |
+
+### Docker 🐳
+| Path | Description |
+|------|-------------|
+| `Docker/DockerHub-Test.ps1` | Docker Hub login and hello-world pull test |
 
 ## How to use 📖
 1. Open PowerShell at the repo root or in the script folder.
-2. Run the script, e.g. `.\ScriptName.ps1`
+2. Run the script, e.g. `.\FilesManagement\SearchFile.ps1`
 3. Adjust variables (paths, URLs, tokens, etc.) inside each script for your environment.
 
 Folders with a **README.md** (e.g. Backups-Only-Files, CopyFolderFiles, CreateZip) have specific usage instructions.
@@ -76,85 +86,98 @@ You can add a new folder per category (e.g. `SystemInfo/`, `Logs/`, `Notificatio
 ## Requirements ✅
 - Windows with PowerShell 5.1 or PowerShell 7+
 - For **Nmap**: Nmap installed and in PATH
+- For **Docker**: Docker installed and in PATH
 - For APIs: configure tokens/API keys per script (Auth0, Azure AD, Google, Azure DevOps, etc.)
+
 ---
 # PowerShell Scripts 📦
-Repositorio de scripts en PowerShell para tareas cotidianas en Windows: APIs externas, gestion de archivos, seguridad, tareas programadas y utilidades del sistema.
+Repositorio de scripts en PowerShell para tareas cotidianas en Windows: APIs externas, gestión de archivos, seguridad, tareas programadas y utilidades del sistema.
 
 ## Estructura del repositorio 📁
 ### Consumo de APIs externas 🔌
 
-| Carpeta / script | Descripcion |
-|------------------|-------------|
-| **Auth0** | `AccessToken.ps1` — Obtencion de access token para Auth0 |
-| **AzureAD** | `AccessToken.ps1` — Token para Azure AD; **GraphApi/GetUserDetail.ps1** — detalle de usuario via Microsoft Graph |
-| **AzureDevops** | `AzureAgentTest.ps1` — Prueba de permisos con PAT (Personal Access Token) |
-| **GoogleApi** | `google-request.ps1` — Ejemplo con Google Places Autocomplete API |
-| **GeneralMethods** | Metodos genericos reutilizables: `Get.ps1`, `PostHeader.ps1`, `PostWithJson.ps1`, `PostWithFile.ps1`, `CheckRandomApi.ps1` |
+| Ruta | Descripción |
+|------|-------------|
+| `ExternalApis/Auth0/AccessToken.ps1` | Obtención de access token para Auth0 |
+| `ExternalApis/AzureAD/AccessToken.ps1` | Token para Azure AD |
+| `ExternalApis/AzureAD/GraphApi/GetUserDetail.ps1` | Detalle de usuario vía Microsoft Graph |
+| `ExternalApis/AzureDevops/AzureAgentTest.ps1` | Prueba de permisos con PAT (Personal Access Token) |
+| `ExternalApis/GoogleApi/google-request.ps1` | Ejemplo con Google Places Autocomplete API |
+| `ExternalApis/GeneralMethods/Get.ps1` | Ejemplo de request GET |
+| `ExternalApis/GeneralMethods/PostHeader.ps1` | POST con headers personalizados |
+| `ExternalApis/GeneralMethods/PostWithJson.ps1` | POST con body JSON |
+| `ExternalApis/GeneralMethods/PostWithFile.ps1` | POST con subida de archivo |
+| `ExternalApis/GeneralMethods/CheckRandomApi.ps1` | Ejemplo de consulta a API aleatoria |
 
-### Gestion de archivos 📂
-| Carpeta / script | Descripcion |
-|------------------|-------------|
-| **Backups-Only-Files** | `Backups.ps1` — Backup de archivos/carpetas con sello de fecha y hora |
-| **CopyFolderFiles** | `CopyFoldersAndSubfolders.ps1` — Copia recursiva de carpetas y subcarpetas |
-| **CreateZip** | `CreateZip.ps1` — Creacion de archivos ZIP |
-| **ReadJson** | `ReadJson.ps1` — Lectura y filtrado de datos desde JSON (ej. proyectos, fechas) |
-| **SearchFile.ps1** | Busqueda recursiva de archivos (ej. `*.ps1`) en una ruta |
+### Gestión de archivos 📂
+| Ruta | Descripción |
+|------|-------------|
+| `FilesManagement/Backups-Only-Files/Backups.ps1` | Backup de archivos/carpetas con sello de fecha y hora |
+| `FilesManagement/CopyFolderFiles/CopyFoldersAndSubfolders.ps1` | Copia recursiva de carpetas y subcarpetas |
+| `FilesManagement/CreateZip/CreateZip.ps1` | Creación de archivos ZIP |
+| `FilesManagement/ReadJson/ReadJson.ps1` | Lectura y filtrado de datos desde JSON (ej. proyectos, fechas) |
+| `FilesManagement/SearchFile.ps1` | Búsqueda recursiva de archivos (ej. `*.ps1`) en una ruta |
 
 ### Reemplazo de variables 🔄
-| Script | Descripcion |
-|--------|-------------|
-| `VariableReplace.ps1` | Reemplazo de propiedades/variables en JSON y salida a archivo |
+| Ruta | Descripción |
+|------|-------------|
+| `VariablesReplace/VariableReplace.ps1` | Reemplazo de propiedades/variables en JSON y salida a archivo |
 
 ### Requests con Curl 🌐
-| Script | Descripcion |
-|--------|-------------|
-| `GetCurl.ps1` | GET con curl |
-| `GetDownloadResponse.ps1` | GET y descarga de respuesta |
+| Ruta | Descripción |
+|------|-------------|
+| `Curl/GetCurl.ps1` | GET con curl |
+| `Curl/GetDownloadResponse.ps1` | GET y descarga de respuesta |
 
 ### Herramientas de seguridad / red 🔒
-| Script | Descripcion |
-|--------|-------------|
-| `ScanIps.ps1` | Escaneo de IPs con Test-Connection |
-| `ScanIpsTcpClient.ps1` | Escaneo de IPs con TcpClient (.NET) |
-| **Nmap/** `ScanIp.ps1` | Escaneo de IP con Nmap |
+| Ruta | Descripción |
+|------|-------------|
+| `SecurityTool/ScanIps.ps1` | Escaneo de IPs con Test-Connection |
+| `SecurityTool/ScanIpsTcpClient.ps1` | Escaneo de IPs con TcpClient (.NET) |
+| `SecurityTool/Nmap/ScanIp.ps1` | Escaneo de IP con Nmap |
 
 ### Utilidades en Windows ⚙️
-| Script | Descripcion |
-|--------|-------------|
-| `AddAzureAgent.ps1` | Agregar Azure DevOps agent en Windows |
-| `CreateEnvironmentVariable.ps1` | Crear variable de entorno en el sistema |
-| `CreateTaskScheduled.ps1` | Crear tarea programada (ej. ejecucion diaria) |
-| `IISInstall.ps1` | Instalacion de IIS |
+| Ruta | Descripción |
+|------|-------------|
+| `UsefulWindowsScripts/AddAzureAgent.ps1` | Agregar Azure DevOps agent en Windows |
+| `UsefulWindowsScripts/CreateEnvironmentVariable.ps1` | Crear variable de entorno en el sistema |
+| `UsefulWindowsScripts/CreateTaskScheduled.ps1` | Crear tarea programada (ej. ejecución diaria) |
+| `UsefulWindowsScripts/IISInstall.ps1` | Instalación de IIS |
 
-## Como usar 📖
-1. Abrir PowerShell en la raiz del repo o en la carpeta del script.
-2. Ejecutar el script deseado, por ejemplo: `.\NombreDelScript.ps1`
-3. Ajustar variables (rutas, URLs, tokens, etc.) dentro de cada script segun tu entorno.
+### Docker 🐳
+| Ruta | Descripción |
+|------|-------------|
+| `Docker/DockerHub-Test.ps1` | Login en Docker Hub y prueba de pull de hello-world |
 
-En carpetas con **README.md** (p. ej. Backups-Only-Files, CopyFolderFiles, CreateZip) hay instrucciones especificas de uso.
+## Cómo usar 📖
+1. Abrir PowerShell en la raíz del repo o en la carpeta del script.
+2. Ejecutar el script deseado, por ejemplo: `.\FilesManagement\SearchFile.ps1`
+3. Ajustar variables (rutas, URLs, tokens, etc.) dentro de cada script según tu entorno.
+
+En carpetas con **README.md** (p. ej. Backups-Only-Files, CopyFolderFiles, CreateZip) hay instrucciones específicas de uso.
 
 ## Scripts recomendados para sumar 💡
-Ideas que encajan con lo que ya tenes y amplian el uso del repositorio:
+Ideas que encajan con lo que ya tenés y amplían el uso del repositorio:
 
-| Categoria | Script sugerido | Para que sirve |
+| Categoría | Script sugerido | Para qué sirve |
 |-----------|-----------------|----------------|
-| **Sistema** | `Get-SystemInfo.ps1` | Disco, RAM, OS, hostname en un reporte rapido |
+| **Sistema** | `Get-SystemInfo.ps1` | Disco, RAM, OS, hostname en un reporte rápido |
 | **Servicios** | `Manage-WindowsService.ps1` | Iniciar / detener / reiniciar servicios por nombre |
 | **Tareas programadas** | `List-ScheduledTasks.ps1` | Listar (y opcionalmente habilitar/deshabilitar) tareas programadas |
 | **Variables de entorno** | `List-EnvironmentVariables.ps1` | Listar o exportar variables de entorno (complementa Create) |
 | **Archivos** | `Find-ReplaceInFiles.ps1` | Buscar y reemplazar texto en archivos (complementa VariablesReplace) |
-| **Archivos** | `Get-DiskUsage.ps1` | Tamaño por carpeta (que carpetas ocupan mas espacio) |
+| **Archivos** | `Get-DiskUsage.ps1` | Tamaño por carpeta (qué carpetas ocupan más espacio) |
 | **Logs** | `Compress-OldLogs.ps1` | Comprimir o rotar logs antiguos por fecha |
 | **Red** | `Test-UrlAvailability.ps1` | Comprobar si una URL responde (health check simple) |
-| **Notificaciones** | `Send-ToastNotification.ps1` | Mostrar notificacion toast en Windows |
-| **Certificados** | `List-Certificates.ps1` | Listar certificados del almacen (LocalMachine/CurrentUser) |
+| **Notificaciones** | `Send-ToastNotification.ps1` | Mostrar notificación toast en Windows |
+| **Certificados** | `List-Certificates.ps1` | Listar certificados del almacén (LocalMachine/CurrentUser) |
 | **Usuarios** | `List-LocalUsers.ps1` | Listar usuarios locales o miembros de un grupo |
 | **Git** | `Git-QuickStatus.ps1` | Status resumido de varios repos en carpetas hijas |
 
-Podes crear una carpeta nueva por categoria (por ejemplo `SystemInfo/`, `Logs/`, `Notifications/`) y agregar ahi los scripts que vayas implementando.
+Podés crear una carpeta nueva por categoría (por ejemplo `SystemInfo/`, `Logs/`, `Notifications/`) y agregar ahí los scripts que vayas implementando.
 
 ## Requisitos ✅
 - Windows con PowerShell 5.1 o PowerShell 7+
 - Para **Nmap**: Nmap instalado y en el PATH
-- Para APIs: configurar tokens/API keys segun cada script (Auth0, Azure AD, Google, Azure DevOps, etc.)
+- Para **Docker**: Docker instalado y en el PATH
+- Para APIs: configurar tokens/API keys según cada script (Auth0, Azure AD, Google, Azure DevOps, etc.)
