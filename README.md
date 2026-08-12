@@ -15,6 +15,9 @@ Repository of PowerShell scripts for day-to-day tasks on Windows: external APIs,
 | `ExternalApis/GeneralMethods/PostWithJson.ps1` | POST with JSON body |
 | `ExternalApis/GeneralMethods/PostWithFile.ps1` | POST with file upload |
 | `ExternalApis/GeneralMethods/CheckRandomApi.ps1` | Random API check example |
+| `ExternalApis/Validation/Test-ApiEndpoint.ps1` | Validate a single API (status, response time, JSON field) |
+| `ExternalApis/Validation/Test-MultipleApis.ps1` | Validate multiple endpoints from JSON config (OK/FAIL summary) |
+| `ExternalApis/Validation/endpoints.example.json` | Sample config for Test-MultipleApis.ps1 |
 
 ### File management 📂
 | Path | Description |
@@ -42,6 +45,17 @@ Repository of PowerShell scripts for day-to-day tasks on Windows: external APIs,
 | `SecurityTool/ScanIps.ps1` | Scan IPs with Test-Connection |
 | `SecurityTool/ScanIpsTcpClient.ps1` | Scan IPs with TcpClient (.NET) |
 | `SecurityTool/Nmap/ScanIp.ps1` | Scan IP with Nmap |
+
+### Network 🌍
+| Path | Description |
+|------|-------------|
+| `Network/Test-Port.ps1` | Check if a host:port is open or closed |
+| `Network/Test-SslCertificate.ps1` | Check SSL certificate expiry (warns if expiring soon) |
+
+### Notifications 🔔
+| Path | Description |
+|------|-------------|
+| `Notifications/Send-ToastNotification.ps1` | Show Windows toast notification (Info, Success, Error) |
 
 ### Useful Windows scripts ⚙️
 | Path | Description |
@@ -75,8 +89,6 @@ Ideas that fit what you already have and extend the repository:
 | **Files** | `Find-ReplaceInFiles.ps1` | Find and replace text in files (complements VariablesReplace) |
 | **Files** | `Get-DiskUsage.ps1` | Size per folder (which folders use the most space) |
 | **Logs** | `Compress-OldLogs.ps1` | Compress or rotate old logs by date |
-| **Network** | `Test-UrlAvailability.ps1` | Check if a URL responds (simple health check) |
-| **Notifications** | `Send-ToastNotification.ps1` | Show toast notification on Windows |
 | **Certificates** | `List-Certificates.ps1` | List certificates from store (LocalMachine/CurrentUser) |
 | **Users** | `List-LocalUsers.ps1` | List local users or group members |
 | **Git** | `Git-QuickStatus.ps1` | Summary status of multiple repos in subfolders |
@@ -108,6 +120,9 @@ Repositorio de scripts en PowerShell para tareas cotidianas en Windows: APIs ext
 | `ExternalApis/GeneralMethods/PostWithJson.ps1` | POST con body JSON |
 | `ExternalApis/GeneralMethods/PostWithFile.ps1` | POST con subida de archivo |
 | `ExternalApis/GeneralMethods/CheckRandomApi.ps1` | Ejemplo de consulta a API aleatoria |
+| `ExternalApis/Validation/Test-ApiEndpoint.ps1` | Validar una API (status, tiempo de respuesta, campo JSON) |
+| `ExternalApis/Validation/Test-MultipleApis.ps1` | Validar varios endpoints desde JSON (resumen OK/FAIL) |
+| `ExternalApis/Validation/endpoints.example.json` | Config de ejemplo para Test-MultipleApis.ps1 |
 
 ### Gestión de archivos 📂
 | Ruta | Descripción |
@@ -135,6 +150,17 @@ Repositorio de scripts en PowerShell para tareas cotidianas en Windows: APIs ext
 | `SecurityTool/ScanIps.ps1` | Escaneo de IPs con Test-Connection |
 | `SecurityTool/ScanIpsTcpClient.ps1` | Escaneo de IPs con TcpClient (.NET) |
 | `SecurityTool/Nmap/ScanIp.ps1` | Escaneo de IP con Nmap |
+
+### Red 🌍
+| Ruta | Descripción |
+|------|-------------|
+| `Network/Test-Port.ps1` | Comprobar si un host:puerto está abierto o cerrado |
+| `Network/Test-SslCertificate.ps1` | Verificar vencimiento de certificado SSL |
+
+### Notificaciones 🔔
+| Ruta | Descripción |
+|------|-------------|
+| `Notifications/Send-ToastNotification.ps1` | Mostrar notificación toast en Windows (Info, Success, Error) |
 
 ### Utilidades en Windows ⚙️
 | Ruta | Descripción |
@@ -168,8 +194,6 @@ Ideas que encajan con lo que ya tenés y amplían el uso del repositorio:
 | **Archivos** | `Find-ReplaceInFiles.ps1` | Buscar y reemplazar texto en archivos (complementa VariablesReplace) |
 | **Archivos** | `Get-DiskUsage.ps1` | Tamaño por carpeta (qué carpetas ocupan más espacio) |
 | **Logs** | `Compress-OldLogs.ps1` | Comprimir o rotar logs antiguos por fecha |
-| **Red** | `Test-UrlAvailability.ps1` | Comprobar si una URL responde (health check simple) |
-| **Notificaciones** | `Send-ToastNotification.ps1` | Mostrar notificación toast en Windows |
 | **Certificados** | `List-Certificates.ps1` | Listar certificados del almacén (LocalMachine/CurrentUser) |
 | **Usuarios** | `List-LocalUsers.ps1` | Listar usuarios locales o miembros de un grupo |
 | **Git** | `Git-QuickStatus.ps1` | Status resumido de varios repos en carpetas hijas |
