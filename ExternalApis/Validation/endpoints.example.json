@@ -1,0 +1,21 @@
+[
+  {
+    "Name": "PokeAPI",
+    "Uri": "https://pokeapi.co/api/v2/pokemon/ditto",
+    "Method": "Get",
+    "ExpectedStatusCode": 200,
+    "JsonPath": "name"
+  },
+  {
+    "Name": "HTTPBin status 200",
+    "Uri": "https://httpbin.org/status/200",
+    "Method": "Get",
+    "ExpectedStatusCode": 200
+  },
+  {
+    "Name": "HTTPBin status 404",
+    "Uri": "https://httpbin.org/status/404",
+    "Method": "Get",
+    "ExpectedStatusCode": 404
+  }
+]
